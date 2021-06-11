@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h2>Autocomplete</h2>
+
+
+    <div class="input-container">
+        <div class="input-fields-select ">
+
+            <label for="select-book">Books </label>
+            <input autoComplete="off" id="select-book" type="text" list='books' placeholder="Select a book" />
+            <div id="spinner" class="icon-container">
+                <i class="loader"></i>
+            </div>
+            <datalist id='books' class="datalist-books" />
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

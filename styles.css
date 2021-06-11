@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #17b5d4;
+  }
+  /* For mobile phone: */
+  input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    border-radius: 3px;
+    height: 43px;
+    opacity:1;
+    background-color: transparent;
+    border: 1px solid #17b5d4;
+ }
+  /* For  Tablet: */
+  @media only screen and (min-width: 768px) {
+    input {
+        width: 75%;
+    }
+  }
+  /* For mobile desktop: */
+  @media only screen and (min-width: 992px) {
+    input {
+        width: 40%;
+    }
+  }
+  input:hover {
+    border: 1px solid #0faece;
+ }
+
+ input:focus {
+    border: 1px solid #0faecec5;
+    -webkit-box-shadow:0 1px 0 0 #0faece  ;
+    -moz-box-shadow:0 1px 0 0 #0faece  ;
+    box-shadow:0 1px 0 0 #0faece  ;
+    outline: none ;
+    
+}
+
+.input-container {
+    padding: 0.3rem 0.6rem 0.3rem 0rem;
+    background: none;
+   
+}
+
+.input-fields-select{
+ position: relative;  
+
+}
+.icon-container {
+    position: absolute;
+    right: 3%;
+    top: 54%;
+    
+  }
+ /* For  Tablet: */
+ @media only screen and (min-width: 768px) {
+    .icon-container {
+        right: 26%;
+    }
+  }
+  /* For mobile desktop: */
+  @media only screen and (min-width: 992px) {
+    .icon-container {
+        left: 37%;
+    }
+  }
+
+
+
+.loader {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    animation: around 5.4s infinite;
+  }
+  
+  @keyframes around {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
+  }
+  
+  .loader::after, .loader::before {
+    content: "";
+    background: white;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+    border-color: #333 #333 transparent transparent;
+    border-style: solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    animation: around 0.7s ease-in-out infinite;
+  }
+  
+  .loader::after {
+    animation: around 0.7s ease-in-out 0.1s infinite;
+    background: transparent;
+  }
+
+
+
+
+
